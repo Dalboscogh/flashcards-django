@@ -15,7 +15,6 @@ import image11 from '../assets/images/image11.jpg'
 import image12 from '../assets/images/image12.jpg'
 import image13 from '../assets/images/image13.jpg'
 import image14 from '../assets/images/image14.jpg'
-import image15 from '../assets/images/image15.jpg'
 
 
 function App() {
