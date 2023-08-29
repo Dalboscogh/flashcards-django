@@ -21,11 +21,7 @@ import image14 from '../assets/images/image14.jpg'
 
 function App() {
   const [message, setMessage] = useState("Esse site é dedicado para Pamella, minha esposa, parceira e amor de minha vida. Sabe que desejo te dar todas as maravilhas do universo e compartilhar esse pequeno tempo que temos de vida e sonhos. Obrigado pelo apoio de tornar isso real.");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
   const [image, setImage] = useState();
   const [currentImageId, setCurrentImageId] = useState();
   const [text, setText] = useState();
@@ -33,30 +29,30 @@ function App() {
 
   function handleClick() {
     if (!image) {
-        setText()
-        setCaption('Oi, razão da minha felicidade')
-        setImage(image1)
-        setCurrentImageId(1)
+      setText()
+      setCaption('Oi, razão da minha felicidade')
+      setImage(image1)
+      setCurrentImageId(1)
     } else if (currentImageId === 1) {
-        setText()
-        setCaption('Meu xodó e dona do melhor dengo')
-        setImage(image2)
-        setCurrentImageId(2)
+      setText()
+      setCaption('Meu xodó e dona do melhor dengo')
+      setImage(image2)
+      setCurrentImageId(2)
     } else if (currentImageId === 2) {
-        setText()
-        setCaption('Minha parceira para a vida')
-        setImage(image3)
-        setCurrentImageId(3)
+      setText()
+      setCaption('Minha parceira para a vida')
+      setImage(image3)
+      setCurrentImageId(3)
     } else if (currentImageId == 0) {
-        setImage()
-        setCaption()
-        setText('Te amo demais! S2')
-        setCurrentImageId(1)
+      setImage()
+      setCaption()
+      setText('Te amo demais! S2')
+      setCurrentImageId(1)
     } else if (currentImageId == 3) {
-    setImage()
-    setCaption()
-    setText('Companheira nas doideras')
-    setCurrentImageId(4)
+      setImage()
+      setCaption()
+      setText('Companheira nas doideras')
+      setCurrentImageId(4)
     } else if (currentImageId == 4) {
       setImage()
       setCaption()
@@ -113,7 +109,7 @@ function App() {
       setText('Meu tudo.')
       setCurrentImageId(0)
     }
-}
+  }
   return (
     <div className="App">
       <div className="message">
@@ -121,39 +117,16 @@ function App() {
       </div>
 
       <div className="container">
-                <div className="header">
-                    <input type="button" value="Clique aqui" onClick={ handleClick }></input>
-                    <h1>Para boiolagem</h1>
-                </div>
+        <div className="header">
+          <input type="button" value="Clique aqui" onClick={ handleClick }></input>
+          <h1>Para boiolagem</h1>
+        </div>
 
-                <p className="text">{ caption }</p>
-                <div className="imageContainer">
-                    <Image className="image" src={ image } />
-                    <h1 className="text">{ text }</h1>
-                </div>
-            </div>
-
-      <div className="sidebar">
-        <button onClick={handleSidebarToggle}>
-          <i className="fa fa-bars"></i>
-        </button>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Sobre mim</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Log in/Sign up</a>
-          </li>
-          <li>
-            <a href="#">Flashcards</a>
-          </li>
-        </ul>
+        <p className="text">{ caption }</p>
+        <div className="imageContainer">
+          <Image className="image" src={ image } />
+          <h1 className="text">{ text }</h1>
+        </div>
       </div>
     </div>
   );
