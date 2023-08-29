@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from 'next/image'
 
+import image0 from '../assets/images/image.jpg'
 import image1 from '../assets/images/image1.jpg'
 import image2 from '../assets/images/image2.jpg'
 import image3 from '../assets/images/image3.jpg'
@@ -21,13 +22,13 @@ import image14 from '../assets/images/image14.jpg'
 function App() {
   const [message, setMessage] = useState("Esse site é dedicado para Pamella, minha esposa, parceira e amor de minha vida. Sabe que desejo te dar todas as maravilhas do universo e compartilhar esse pequeno tempo que temos de vida e sonhos. Obrigado pelo apoio de tornar isso real.");
 
-  const [image, setImage] = useState();
+  const [image, setImage] = useState( image0 );
   const [currentImageId, setCurrentImageId] = useState();
   const [text, setText] = useState();
   const [caption, setCaption] = useState();
 
   function handleClick() {
-    if (!image) {
+    if (!image0) {
       setText()
       setCaption('Oi, razão da minha felicidade')
       setImage(image1)
