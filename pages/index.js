@@ -111,10 +111,6 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="message">
-        {message}
-      </div>
-
       <div className="container">
         <div className="header">
           <input type="button" value="Clique aqui" onClick={ handleClick }></input>
@@ -126,6 +122,9 @@ function App() {
           <Image className="image" src={ image } />
           <h1 className="text">{ text }</h1>
         </div>
+      </div>
+      <div className="message">
+        {message}
       </div>
     </div>
   );
