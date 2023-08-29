@@ -28,6 +28,7 @@ function App() {
   const [currentImageId, setCurrentImageId] = useState();
   const [text, setText] = useState();
   const [caption, setCaption] = useState();
+  
   function handleClick() {
     if (!image) {
         setText()
@@ -152,15 +153,11 @@ function App() {
           </li>
         </ul>
       </div>
-
-      <div className={isSidebarOpen ? "main-content-open" : "main-content-closed"}>
-        <Home publications={publications} readmeFiles={readmeFiles} />
-      </div>
     </div>
   );
 }
 
-const Home = ({ publications, readmeFiles }) => {
+const Home = () => {
   return (
     <div className="home">
       <h1>Home</h1>
