@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Image from 'next/image'
+import './style.css'
 
 import image1 from '../assets/images/image1.jpg'
 import image2 from '../assets/images/image2.jpg'
@@ -28,7 +30,7 @@ function App() {
   const [currentImageId, setCurrentImageId] = useState();
   const [text, setText] = useState();
   const [caption, setCaption] = useState();
-  
+
   function handleClick() {
     if (!image) {
         setText()
