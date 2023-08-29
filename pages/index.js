@@ -1,3 +1,6 @@
+import React from "react";
+import axios from "axios";
+
 function App() {
   const [message, setMessage] = useState("Esse site é dedicado para Pamella, minha esposa, parceira e amor de minha vida. Sabe que desejo te dar todas as maravilhas do universo e compartilhar esse pequeno tempo que temos de vida e sonhos. Obrigado pelo apoio de tornar isso real.");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
