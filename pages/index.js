@@ -9,24 +9,6 @@ function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const getLinkedInPublications = async () => {
-    const response = await axios.get("https://api.linkedin.com/v2/me/publications");
-    return response.data;
-  };
-
-  const getGitHubReadmeFiles = async () => {
-    const response = await axios.get("https://api.github.com/users/Dalboscogh/repos");
-    return response.data.map((repo) => repo.readme);
-  };
-
-  useEffect(() => {
-    getLinkedInPublications().then((publications) => setPublications(publications));
-    getGitHubReadmeFiles().then((readmeFiles) => setReadmeFiles(readmeFiles));
-  }, []);
-
-  const publications = useState([]);
-  const readmeFiles = useState([]);
-
   return (
     <div className="App">
       <div className="message">
@@ -67,20 +49,6 @@ const Home = ({ publications, readmeFiles }) => {
   return (
     <div className="home">
       <h1>Home</h1>
-      <h2>Publicações do LinkedIn</h2>
-      {publications.map((publication) => (
-        <div key={publication.id}>
-          <h3>{publication.title}</h3>
-          <p>{publication.description}</p>
-        </div>
-      ))}
-      <h2>Arquivos README do GitHub</h2>
-      {readmeFiles.map((readmeFile) => (
-        <div key={readmeFile.name}>
-          <h3>{readmeFile.name}</h3>
-          <p>{readmeFile.content}</p>
-        </div>
-      ))}
     </div>
   );
 };
