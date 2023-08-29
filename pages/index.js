@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from 'next/image'
-import 'style.css'
+import 'styles.css'
 
 import image1 from '../assets/images/image1.jpg'
 import image2 from '../assets/images/image2.jpg'
