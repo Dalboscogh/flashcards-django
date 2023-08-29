@@ -1,0 +1,42 @@
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+      clip-path: inset(0.9px)
+    }
+  }
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.imageContainer {
+    margin: 10px auto;
+    height: 350px;
+    width: 300px;
+}
+
+div input {
+    height: 40px;
+    border-radius: 10px;
+    background-color: yellow;
+    font-size: 30px;
+}
+
+.imageContainer img {
+    border-radius: 20px;
+    max-width:100%;
+    max-height:100%;    
+}
+
+input[type=button] {
+    background-color: #AA0000;
+    color: white;
+    padding: 32px;
+    cursor: pointer;
+
+}
